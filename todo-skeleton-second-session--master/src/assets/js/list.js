@@ -29,6 +29,22 @@ const columns = [
       dueDate: "16.11.2023",
       columnId: "to-do"
     },
+    {
+      id: 2,
+      title: "Задача 1",
+      description: "Описание задачи 1",
+      complexity: "high",
+      dueDate: "16.11.2023",
+      columnId: "in-progress"
+    },
+    {
+      id: 3,
+      title: "Задача 1",
+      description: "Описание задачи 1",
+      complexity: "high",
+      dueDate: "16.11.2023",
+      columnId: "done"
+    },
   ];
 
   

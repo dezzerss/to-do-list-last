@@ -22,16 +22,20 @@
     margin-right: 15px;
   }
   
-  .complexity__dot {
+  .complexity__dot li {
     width: 24px;
     height: 12px;
     flex-shrink: 0;
-    background-color: #d9d9d9; 
+    
     border-radius: 0px 10px 10px 24px;
     display: inline-block;
     margin-right: 5px;
   }
-  
+
+  .complexity__dot--standart {
+    background-color: #d9d9d9; 
+  }
+
   .complexity__dot--medium {
     background-color: #FDE047; 
   }
@@ -63,5 +67,20 @@
   .task-item__client {
     font-size: 14px;
     color: #4F46E5; 
-    text-align: center;
+    text-align: right;
   }
+
+  .task-item__header {
+    display: flex;
+  }
+
+  .remove-item {
+    color: black;
+    font-size: 15px;
+    text-align: right;
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: none;
+  }
+  

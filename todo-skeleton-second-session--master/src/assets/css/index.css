@@ -5,6 +5,7 @@
 @import './component/_task.css';
 @import './component/_modal.css';
 @import './_media.css';
+@import './component/_modal-board.css';
 
 
 * {
