@@ -6,6 +6,7 @@
 @import './component/_modal.css';
 @import './_media.css';
 @import './component/_modal-board.css';
+@import './component/_sectionBoard.css';
 
 
 * {

@@ -12,11 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeModalBoard = document.querySelector(".close-modal__board");
   const cancelBoard = document.querySelector(".cancel-button__board");
   const formBoard = document.querySelector(".modal-board form")
-  const submitBoard = document.querySelector(".to_send-submit__board");
+  const submitBoard = document.querySelector(".to-send-submit__board");
 
-  formBoard.addEventListener("submitBoard", (e) => {
+  submitBoard.addEventListener("click", (e) => {
     e.preventDefault();
-
+    modalBoard.style.display = "none"
+    formBoard.stylevalue = "";
     const titleNameBoard = document.getElementById("title-name-board").value;
 
     if (titleNameBoard.trim() === "") {
@@ -25,17 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const addKanbanContainer = document.querySelector(".kanban"); 
-    const addNewSection = document.createElement('div');
+    const addNewSection = document.createElement('section');
     addNewSection.classList.add('kanban__column--${titleNameBoard}');
     addNewSection.innerHTML = `
-    <div class="kanban__header">
-      <div class="kanban__header-content">
+    <div class="kanban__header__board">
+      <div class="kanban__header-content__board">
         <img src="./src/assets/img/kanban/plus.svg" alt="Колонка ${titleNameBoard}" class="kanban__icon kanban__icon--column">
-        <h2 class="kanban__title">${titleNameBoard}</h2>
+        <h2 class="kanban__title__board">${titleNameBoard}</h2>
       </div>
       <img src="./src/assets/img/kanban/plus.svg" alt="Добавить задачу" class="kanban__icon kanban__icon--add">
     </div>
-    <div class="kanban__list"></div>
+    <div class="kanban__list__board"></div>
   `;
 
   addKanbanContainer.appendChild(addNewSection);
@@ -43,12 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("title-name-board").value = "";
   })
 
-  // submitBoard.addEventListener("click", () => {
-  //   modalBoard.style.display = "none"
-  //   formBoard.stylevalue = "";
-  // })
+  addBoardElement.forEach((button) => {
+    button.addEventListener("click", () => {
+      modalBoard.style.display = "flex";
+    });
+  });
 
-  
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -113,12 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
   addTaskButtons.forEach((button) => {
     button.addEventListener("click", () => {
       modal.style.display = "flex";
-    });
-  });
-
-  addBoardElement.forEach((button) => {
-    button.addEventListener("click", () => {
-      modalBoard.style.display = "flex";
     });
   });
 
